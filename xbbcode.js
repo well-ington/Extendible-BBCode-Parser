@@ -95,7 +95,7 @@ var XBBCODE = (function() {
     tags = {
         "b": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-b">';
+                return '<span style="font-weight: bold;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -115,7 +115,7 @@ var XBBCODE = (function() {
         },
         "center": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-center">';
+                return '<span style="margin-left:auto;margin-right:auto;display: block;text-align: center;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -124,10 +124,10 @@ var XBBCODE = (function() {
 
         "code": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-code">';
+                return '<code>';
             },
             closeTag: function(params,content) {
-                return '</span>';
+                return '</code>';
             },
             noParse: true
         },
@@ -211,7 +211,7 @@ var XBBCODE = (function() {
 
         "i": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-i">';
+                return '<span style="font-style: italic;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -236,7 +236,7 @@ var XBBCODE = (function() {
         },
         "justify": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-justify">';
+                return '<span style="display: block;text-align: justify;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -260,7 +260,7 @@ var XBBCODE = (function() {
                 }
 
 
-                return '<span class="xbbcode-size-36" style="color:' + colorCode + '">';
+                return '<span style="color:' + colorCode + '; font-size:36px;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -268,7 +268,7 @@ var XBBCODE = (function() {
         },
         "left": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-left">';
+                return '<span style="display: block;text-align: left;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -312,16 +312,16 @@ var XBBCODE = (function() {
         },
         "php": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-code">';
+                return '<code>';
             },
             closeTag: function(params,content) {
-                return '</span>';
+                return '</code>';
             },
             noParse: true
         },
         "quote": {
             openTag: function(params,content) {
-                return '<blockquote class="xbbcode-blockquote">';
+                return '<blockquote>';
             },
             closeTag: function(params,content) {
                 return '</blockquote>';
@@ -329,7 +329,7 @@ var XBBCODE = (function() {
         },
         "right": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-right">';
+                return '<span style="display: block;text-align: right;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -337,7 +337,7 @@ var XBBCODE = (function() {
         },
         "s": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-s">';
+                return '<span style="text-decoration: line-through;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -351,8 +351,7 @@ var XBBCODE = (function() {
                 if (mySize < 4 || mySize > 40) {
                     mySize = 14;
                 }
-
-                return '<span class="xbbcode-size-' + mySize + '">';
+		return `<span style="font-size: ${mySize}px;">`;
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -374,8 +373,7 @@ var XBBCODE = (function() {
                         }
                     }
                 }
-
-                return '<span class="xbbcode-size-10" style="color:' + colorCode + '">';
+		return `<span style="font-size: 10px; color: ${colorCode};">`
             },
             closeTag: function(params,content) {
                 return '</span>';
@@ -401,7 +399,7 @@ var XBBCODE = (function() {
 
         "table": {
             openTag: function(params,content) {
-                return '<table class="xbbcode-table">';
+                return '<table style="border-collapse:collapse; border: 1px solid #666;">';
             },
             closeTag: function(params,content) {
                 return '</table>';
@@ -430,7 +428,7 @@ var XBBCODE = (function() {
         },
         "thead": {
             openTag: function(params,content) {
-                return '<thead class="xbbcode-thead">';
+                return '<thead>';
             },
             closeTag: function(params,content) {
                 return '</thead>';
@@ -440,7 +438,7 @@ var XBBCODE = (function() {
         },
         "td": {
             openTag: function(params,content) {
-                return '<td class="xbbcode-td">';
+                return '<td style"border: 1px solid #666;">';
             },
             closeTag: function(params,content) {
                 return '</td>';
@@ -449,7 +447,7 @@ var XBBCODE = (function() {
         },
         "th": {
             openTag: function(params,content) {
-                return '<th class="xbbcode-th">';
+                return '<th style="border: 1px solid #666;">';
             },
             closeTag: function(params,content) {
                 return '</th>';
@@ -458,7 +456,7 @@ var XBBCODE = (function() {
         },
         "tr": {
             openTag: function(params,content) {
-                return '<tr class="xbbcode-tr">';
+                return '<tr>';
             },
             closeTag: function(params,content) {
                 return '</tr>';
@@ -468,7 +466,7 @@ var XBBCODE = (function() {
         },
         "u": {
             openTag: function(params,content) {
-                return '<span class="xbbcode-u">';
+                return '<span style="text-decoration: underline;">';
             },
             closeTag: function(params,content) {
                 return '</span>';
