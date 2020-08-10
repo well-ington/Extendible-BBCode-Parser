@@ -1,5 +1,7 @@
 # Extendible-BBCode-Parser
 
+## Inline styles version
+
 This is an extendible BBCode parser for JavaScript. 
 
 Online demo: [patorjk.com/bbcode-previewer](http://patorjk.com/bbcode-previewer/)
