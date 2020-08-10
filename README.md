@@ -1,6 +1,7 @@
 # Extendible-BBCode-Parser
 
 ## Inline styles version
+This version use inline-css instead of classes as output.
 
 This is an extendible BBCode parser for JavaScript. 
 
