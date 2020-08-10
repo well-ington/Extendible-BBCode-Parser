@@ -438,7 +438,7 @@ var XBBCODE = (function() {
         },
         "td": {
             openTag: function(params,content) {
-                return '<td style"border: 1px solid #666;">';
+                return '<td style="border: 1px solid #666;">';
             },
             closeTag: function(params,content) {
                 return '</td>';
